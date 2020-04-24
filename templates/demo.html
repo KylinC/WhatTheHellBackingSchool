@@ -49,16 +49,18 @@
             var tmp_1 = $("#schoolname").val();
             var tmp_2 = $("#datename").val();
             var tmp_3 = $("#deptname").val();
+            console.log("111");
 
             $.ajax({
                 type: 'post',
                 url: 'http://127.0.0.1:5000/data',
-                data: JSON.stringify([tmp_1, tmp_2, tmp_3]),
+                data: JSON.stringify({"schoolname":tmp_1, "datename":tmp_2, "deptname":tmp_3}),
                 dataType: "jsonp",
                 contentType: "application/json; charset=utf-8",
                 success: function (res) {
                     ts = document.getElementById("mytextarea");
                     ts.value = res[0];
+                    // console.log(res);
                 },
                 error: function (msg) {
                     console.log(msg);
