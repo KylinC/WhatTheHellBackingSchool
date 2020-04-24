@@ -5,7 +5,7 @@
 
 
 
-  <p align="center">
+  <p>
     <a href="https://github.com/KylinC/WhatTheHellBackingSchool"><img src="https://img.shields.io/badge/python-3.5.7-blue.svg" alt="GitHub version"></a>
     <a href="https://github.com/KylinC/WhatTheHellBackingSchool"><img src="https://img.shields.io/badge/flask-1.1.1-brightgreen" alt="GitHub version"></a>
     <a href="https://github.com/KylinC/WhatTheHellBackingSchool"><img src="https://img.shields.io/badge/jquery-1.11.2-yellowgreen" alt="GitHub version"></a>
