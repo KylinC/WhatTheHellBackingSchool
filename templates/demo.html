@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>返校通知生成器</title>
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="static/css/bootstrap.css" rel="stylesheet">
+ 
+<meta name="full-screen" content="true">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-fullscreen" content="true">
+<meta name="360-fullscreen" content="true">
+</head>
+<body>
+    <h2 class="text-primary text-center">返校通知生成器</h2>
+    <div style="padding: 100px 50px 10px;">
+        <form class="bs-example bs-example-form" role="form">
+            <div class="input-group">
+                <span class="input-group-addon">输入校名:</span>
+                <input id="schoolname" type="text" class="form-control" placeholder="上海交东大学">
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon">开学日期:</span>
+                <input id="datename" type="text" class="form-control" placeholder="4月28日">
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon">下达部门:</span>
+                <input id="deptname" type="text" class="form-control" placeholder="上级部门">
+            </div>
+        </form>
+        <div style="padding: 20px 120px 10px;">
+            <button class="btn btn-primary" type="submit" onclick='Analyse()'>开学!!!</button>
+        </div>
+        <div class="input-group">
+            <textarea id="mytextarea" style="min-width:300px;min-height:500px;"></textarea> 
+        </div>
+    </div>
+    <script type="text/javascript" src="static/js/jquery-1.11.2.min.js"></script>
+    <script>
+        function Analyse(){
+            var tmp_1 = $("#schoolname").val();
+            var tmp_2 = $("#datename").val();
+            var tmp_3 = $("#deptname").val();
+
+            $.ajax({
+                type: 'post',
+                url: 'http://127.0.0.1:5000/data',
+                data: JSON.stringify([tmp_1, tmp_2, tmp_3]),
+                dataType: "jsonp",
+                contentType: "application/json; charset=utf-8",
+                success: function (res) {
+                    ts = document.getElementById("mytextarea");
+                    ts.value = res[0];
+                },
+                error: function (msg) {
+                    console.log(msg);
+                }
+            });
+        }
+    </script>
+</body>
+<div id="mianDIV" style="display:inline-block;width:100%; height:100%;margin: 0 auto; background: white; position:relative;" ></div>
+<html>
+
