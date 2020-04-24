@@ -21,7 +21,7 @@
 
 ## View on Phone
 
-<img style="height:600px;" src="http://kylinhub.oss-cn-shanghai.aliyuncs.com/2020-04-24-IMG_7657.jpg">
+<img style="height:400px;" src="http://kylinhub.oss-cn-shanghai.aliyuncs.com/2020-04-24-IMG_7657.jpg">
 
 
 
