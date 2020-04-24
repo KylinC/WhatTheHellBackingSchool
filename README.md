@@ -21,8 +21,9 @@
 
 ## View on Phone
 
-<img style="height:400px;" src="http://kylinhub.oss-cn-shanghai.aliyuncs.com/2020-04-24-IMG_7657.jpg">
-
+<center>
+<img src="http://kylinhub.oss-cn-shanghai.aliyuncs.com/2020-04-24-IMG_7657.jpg" width="40%" height="40%" />
+</center>
 
 
 ## Launch
